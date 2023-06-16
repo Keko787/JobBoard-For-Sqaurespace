@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="app">
+        <h1>Job Postings</h1>
+    
+        <div class="filters">
+          <label for="department">Department:</label>
+          <select id="department" v-model="selectedDepartment">
+            <option value="">All</option>
+            <option v-for="department in departments" :value="department">{{ department }}</option>
+          </select>
+    
+          <label for="location">Location:</label>
+          <select id="location" v-model="selectedLocation">
+            <option value="">All</option>
+            <option v-for="location in locations" :value="location">{{ location }}</option>
+          </select>
+        </div>
+    
+        <ul>
+          <li v-for="job in filteredJobs" :key="job.id">
+            <h3>{{ job.title }}</h3>
+            <p>Location: {{ job.location }}</p>
+            <p>Department: {{ job.department }}</p>
+            <button @click="openPopup(job)">View Description</button>
+            <div v-if="job.showPopup" class="popup">
+              <div class="popup-content">
+                <h3>{{ job.title }}</h3>
+                <p>{{ job.description }}</p>
+                <p>Location: {{ job.location }}</p>
+                <p>Department: {{ job.department }}</p>
+                <button @click="closePopup(job)">Close</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+      <script src="script.js"></script>
+
+</body>
+</html>

@@ -15,6 +15,8 @@ let jobsdata = [  /* You can add more positions and information based on the for
       "locationSlug": "city-state",  
       "department": "Department"
     },
+
+    // its recomended to use notepad or text editor for the description and paste into the description once writen for better readability and organization 
     */
     
     { "id": 1, 

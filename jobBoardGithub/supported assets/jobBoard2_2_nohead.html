@@ -1,0 +1,262 @@
+    <div id="app">
+
+        <div class="container-fluid">
+          <div class="row">
+            
+            <!--filter menu-->
+            <div class="col-md-3">
+              <div>
+                
+                <!--Department filter-->
+                <h3>Department:</h3>
+                <ul>
+                  <li v-for="department in departments" :key="department">
+                    <input class="form-check-input" type="checkbox" v-model="selectedDepartments" :value="department">
+                    {{ department }}
+                  </li>
+                </ul>
+              </div> 
+
+              <!--Location filter-->  <!--Comment out to disable being able to change location (make sure to initialze the selected department with what location you want to select)-->
+              <div>
+                <h3>Location:</h3>
+                <ul>
+                  <li v-for="location in locations" :key="location">
+                    <input class="form-check-input" type="checkbox" v-model="selectedLocations" :value="location">
+                    {{ location }}
+                  </li>
+                </ul>
+              </div>
+              
+              <!--Search menu that searches for position, department, and location, but will take the other filters into consideration-->
+              <div>
+                <h3>Search:</h3>
+                <input type="text" v-model="searchQuery" placeholder="Search job positions">
+            </div>
+            </div>
+            <!--filter menu end-->
+
+            <!--Job position entries-->
+            <div class="col-md-9">
+              <ul>
+                <li v-for="job in filteredJobs" :key="job.id">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ job.title }}</h4>
+                      <h6 class="card-subtitle mb-2 text-muted">{{job.location}}</h6>
+                      <h6 class="card-subtitle mb-2 text-muted">{{job.department}}</h6>
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" :data-bs-target="'#jobModal-' + job.id">Job Description</button>
+                      <!--<a :href="'https://example.com/job/' + job.id" class="btn btn-primary a-button">Apply</a>-->  <!--debug-->
+                      <a :href="'https://www.aespj.com/job-' + job.locationSlug + '-' + job.department.toLowerCase()" class="btn btn-primary a-button">Apply</a>  <!--Link to application page-->
+                    </div>
+                  </div>
+
+                  <!--modal pop-up-->
+                  <div class="modal fade" :id="'jobModal-' + job.id" tabindex="-1" role="dialog" aria-labelledby="jobModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">  <!--controls window size -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="jobModalLabel">{{ job.title }}</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">  <!--where the content appears/ the window size-->
+                          <p>{{ job.description }}</p>
+                        </div>
+                        <div class="modal-footer">
+                        <!--<a :href="'https://example.com/job/' + job.id" class="btn btn-primary">Apply</a>-->  <!--debug-->
+                        <a :href="'https://www.aespj.com/job-' + job.locationSlug + '-' + job.department.toLowerCase()" class="btn btn-primary a-button">Apply</a>  <!--Link to application page-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>    
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END OF HTML-->
+
+    <!--bootstrap CSS Library/Stylesheet-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <!--CSS formatting and styling of the job board and webpage-->
+    <style>
+        
+    /*For the job board menu and space format*/
+        
+        li {
+          list-style: none;
+        }
+        .a-button {
+          margin-left: 2.5%;
+        }
+
+    /*For the job position cards */
+        .card {
+        width: 35rem; 
+        padding: 15px;
+        margin: 10px 0;
+        }
+
+    /* Custom styles for modal (the popup window) */
+          .modal-body {
+              max-height: calc(90vh - 112px);  /* Set a maximum height for the modal body */
+              overflow-y: auto;  /* Enable vertical scrolling if content exceeds the height */
+              white-space: normal;  /* or break-spaces */
+              overflow-x: hidden;  /* Remove the overflow-x property */
+          }
+
+          .modal-dialog {
+            max-height: 90vh;  /* Set a maximum height for the modal dialog */
+            width: 50%;  /* Set the width of the modal dialog */
+            max-width: 1200px;  /* Set a maximum width for the modal dialog */
+          }
+    
+    /*For integrating into your sqaurespace webpage (COPY AND PASTE THE STYLES FROM INSPECT ELEMENT) 
+    [Styles below are examples, but YOU MUST OVERWRITE THEM TO ADD YOUR OWN]*/
+    
+    /*Reformat links <a> in header nav*/
+        
+        a {
+        color: inherit;
+        text-decoration: none;
+        }
+      
+        a {
+        background-color: transparent;
+          }
+        
+    /*Reformat <h1>*/
+    
+        h1 {
+        color: #002664;
+        }
+    
+        h1 {
+          font-family: Arial,Helvetica,sans-serif;
+          font-weight: 700;
+          font-size: 32px;
+          font-family: eurostile-extended;
+          font-weight: 900;
+          font-style: normal;
+          font-size: 26px;
+          letter-spacing: 0em;
+          line-height: 1em;
+          text-transform: none;
+    }
+    
+    /*Reformat <h2>*/
+
+    /*Reformat <h3>*/
+
+        h3 {
+        /* font-family: Arial,Helvetica,sans-serif; */
+        /* font-weight: 700; */
+        /* font-size: 18px; */
+        /* letter-spacing: 0em; */
+        /* line-height: 1.2em; */
+        /* text-transform: none; */
+        font-family: eurostile;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 14px;
+        letter-spacing: .32em;
+        line-height: .9em;
+        text-transform: uppercase;
+        }
+    
+    h3 {
+        color: #5482ab;
+    }
+        
+    /*Reformat <p> */
+    body {
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 16px;
+        letter-spacing: 0em;
+        line-height: 1.6em;
+        font-family: Droid Sans;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18px;
+        letter-spacing: .03em;
+        line-height: 1.9em;
+        text-transform: none;
+        color: #7a7d7f;
+    }
+      </style>
+    <!--END OF MANUAL CSS STYLE SHEET-->
+
+    <!--Vue & bootsrap JS Libraries-->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!--Data File-->
+    <!-----------------------------------------------------------------------------------------
+      ***KEEP NOTE***: DUE TO CACHING PROCEEDURES FROM THE CDN, YOU MUST CHANGE THE FILE NAME WHEN CHANGING/UPDATING DATA AND IT MUST BE UNIQUE
+
+     (RECCOMENDED TO USE A NAMING SCHEME BASED ON DATE AND TIME FORMAT:[data-month-day-year-HourMinute.js])
+     EX of Naming Scheme:  [ data-6-22-2023-1020.js ]
+     
+     You must also change the source link in this index file to the new file name of the updated file 
+    ---------------------------------------------------------------------------------------------->
+
+    <!--Data File CDN SRC Link BELOW------------>
+    <script src="https://cdn.jsdelivr.net/gh/Keko787/jobBoard-data-test@latest/data-6-29-2023-1110.js"></script>
+    <!-------------------------------------------------------------------------------------------------->
+
+    <!--Make sure to input the file path based on the template or format below 
+    <script src="https://cdn.jsdelivr.net/gh/Keko787/JobBoard-For-Squarespace/jobBoardGithub/data-6-22-2023-1020.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/user/repo@ver/path/file.js"></script>
+    
+    Redundant link: <script src="https://cdn.jsdelivr.net/gh/Keko787/JobBoard-For-Squarespace/jobBoardGithub/data-6-22-2023-1020.js"></script>
+    --------------------------------------------------------------------------------------------------------------->
+      
+    <!--App script/ vue.js code [has data, and functions to make it work]-->
+      <script>
+        const app = Vue.createApp({
+          data() {
+            return {
+              jobs: jobsdata,  // jobsdata is from the data file
+              selectedDepartments: [],  // list of filtered departments (You can manually initialize the menu with it pre-selected)
+              selectedLocations: [],  // list of filtered locations (You can manually initialize the menu with it pre-selected)
+              departments: [],  // list of departments
+              locations: [],  // list of locations
+              searchQuery: ''  // inputted word in search
+            };
+          },
+          computed: {
+            filteredJobs() {  // filters the position based on the dept. and location selected
+              let filteredJobs = this.jobs;  // initialize the filter jobs variable with the populated jobs data
+      
+              if (this.selectedDepartments.length > 0) {  // if the # of dept available is more than 0 (if there is item in the selected dept array (aka someone selected a dept), start to filter)
+                filteredJobs = filteredJobs.filter(job => this.selectedDepartments.includes(job.department));  // dept. being filtered
+              }
+      
+              if (this.selectedLocations.length > 0) {  // if the # of locations available is more than 0 (if there is item in the selected locations array (aka someone selected a location), start to filter)
+                filteredJobs = filteredJobs.filter(job => this.selectedLocations.includes(job.location));  // locations being filtered
+              }
+
+              if (this.searchQuery.trim() !== '') {  // this will search the position based on the title based on the order, the search is lowest on filter priority
+                        const searchLower = this.searchQuery.trim().toLowerCase();  // space/case-insensitive matching
+                        filteredJobs = filteredJobs.filter(job => job.title.toLowerCase().includes(searchLower));  // title being filtered
+                    }
+      
+              return filteredJobs;  // returns the jobs that were in the resulting filter
+            }
+          },
+          mounted() {  // allows you to add in data without worrying to sort it or adding a new option to the filter menu (allows you to plug and chug data)
+            this.departments = [...new Set(this.jobs.map(job => job.department))];  // basically finds all the departments in the data file to list them out
+            this.locations = [...new Set(this.jobs.map(job => job.location))];  // basically finds all the locations in the data file to list them out
+          }
+        });
+      
+        app.mount('#app');
+      </script>
+      <!--END OF JS SCRIPT-->
+    
+      <!--By Kevin Kostage
+        Version 2.2
+        6/7/21 - 6/29/23
+      -->

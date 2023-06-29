@@ -16,7 +16,7 @@ Making data CDN file:
      	(RECCOMENDED TO USE A NAMING SCHEME BASED ON DATE AND TIME FORMAT:[data-month-day-year-HourMinute.js])
      	EX of Naming Scheme:  [ data-6-22-2023-1020.js ]
      
-	Once done making the file and commiting it, fill out the the data file in the SRC link in line 99 or look for the data file section (lines 86-105) and file the url that isnt commented. based on the format below
+	Once done making the file and commiting it, fill out the the data file in the SRC link in line 99 or look for the data file section (lines 86-105) and file the url that isnt commented. based on the format 	below
  	<script src="https://cdn.jsdelivr.net/gh/user/repo@ver/path/file.js"></script>
 
 
@@ -29,16 +29,21 @@ To update or change data:
      	(RECCOMENDED TO USE A NAMING SCHEME BASED ON DATE AND TIME FORMAT:[data-month-day-year-HourMinute.js])
      	EX of Naming Scheme:  [ data-6-22-2023-1020.js ]
      
-	Once done updating and changing the file name of the file and commiting it, fill out the the data file in the SRC link in line 99 or look for the data file section (you wont miss it) and file the url that isnt commented. based on the format below
+	Once done updating and changing the file name of the file and commiting it, fill out the the data file in the CDN SRC link or look for the data file section and file the url that isnt commented. based on 	the format below
  	<script src="https://cdn.jsdelivr.net/gh/user/repo@ver/path/file.js"></script>
 
 
 Reformating/integrating your webpage design and styles/Changing CSS and styling:
-	In the CSS styling section (line 113 - 218), go to the sub-section of re-formating/integrating your sqaurespace style (line 147-218).
+	In the CSS styling section, go to the sub-section of re-formating/integrating your sqaurespace style.
 	From there you can delete all of the CSS style code to overwrite them with your own.
 	If you wish to implement the styles from your sqaurespace design, disable the preview mode of the program or copy and cut the code temporarily.
 	Then inspect element via right clicking on the desired text or content and selecting "inspect element" or "inpsect"
 	Then on the bottom of the console, there would be a console window tab called "styles"
-	From there, copy the CSS styles based on comments in the code section
+	From there, copy the CSS styles based on comments in the code section.
+
+Inputing data into data file:
+	You can use normal html element tags inside the description varaible.
+	It must stay in one line, but it there is no limit to how long the length of the line can be, so you can make the description as long as you want.
+	It is recommended to use a notepad or text editor to create the description and paste it into the description value.
 	
 

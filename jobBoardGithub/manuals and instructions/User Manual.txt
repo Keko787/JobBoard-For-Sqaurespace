@@ -42,7 +42,7 @@ Reformating/integrating your webpage design and styles/Changing CSS and styling:
 	From there, copy the CSS styles based on comments in the code section.
 
 Inputing data into data file:
-	You can use normal html element tags inside the description varaible.
+	you can add html elements like <strong> to make text bold and <ul> and <li> to makes lists, the only exception is <p> because it is the default in the modal window but it would still be recognized so no 	worries.
 	It must stay in one line, but it there is no limit to how long the length of the line can be, so you can make the description as long as you want.
 	It is recommended to use a notepad or text editor to create the description and paste it into the description value.
 	

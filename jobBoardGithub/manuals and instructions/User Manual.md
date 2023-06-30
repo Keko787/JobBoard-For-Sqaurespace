@@ -35,7 +35,9 @@ Once done updating and changing the file name of the file and commiting it, fill
 
 <br>**In this case**, make sure to just change the file name to the name that was changed in the github name change and commit.
 
-**To change the name**, navigate to the file page, click the pencil on the top right of the consol window, then above the consol window, the name will apear and can be edited to the new desired name.
+### To change the name:
+
+Navigate to the file page, click the pencil on the top right of the consol window, then above the consol window, the name will apear and can be edited to the new desired name.
 
 It is suggested to do this first before making any changes to the file in case you forget to do it when submitting. Dont worry if this happens, you can reopen the editor to change the name of the file.
 
@@ -43,18 +45,30 @@ MAKE SURE TO COMMIT THE CHANGE.
 
 ## Reformating/integrating your webpage design and styles/Changing CSS and styling:
 	
-In the CSS styling section, go to the sub-section of re-formating/integrating your sqaurespace style. From there you can delete all of the CSS style code to overwrite them with your own.
+In the CSS styling section, go to the sub-section of re-formating/integrating your sqaurespace style. 
 
-If you wish to implement the styles from your sqaurespace design, disable the preview mode of the program or copy and cut the code temporarily. Then inspect element via right clicking on the desired text or content and selecting "inspect element" or "inpsect" Then on the bottom of the console, there would be a console window tab called "styles" From there, copy the CSS styles based on comments in the code section.
+From there you can delete all of the CSS style code to **overwrite them with your own**.
+
+If you wish to implement the styles from your sqaurespace design:
+
+- Disable the preview mode of the program or copy and cut the code temporarily. 
+
+- Then **inspect element** of the page or text via right clicking on the desired text or content and selecting "inspect element" or "inpsect." 
+
+- Then on the bottom of the console, there would be a console window tab called "styles" From there, copy the CSS styles based on comments in the code section.
+
+- Then paste the CSS code in the style block based on where the comments dictate where each style block should go. If it is not listed, then place in at the bottom of the style block
+
+- FYI the style block looks like this. <style></style>
 
 ## Inputing data into data file:
 	
 You can add html elements like "<-strong>" to make text bold and "<-ul>" and "<-li>" to makes lists, the only exception is "<-p>" because it is the default in the modal window, but it would still be recognized so no worries.
 
-It must stay in one line, but it there is no limit to how long the length of the line can be, so you can make the description as long as you want. It is recommended to use a notepad or text editor to create the description and paste it into the description value.'
+It must stay in one line, but it there is no limit to how long the length of the line can be, so you can make the description as long as you want. It is recommended to use a notepad or text editor to create the description and paste it into the description value.
 
 MAKE SURE TO KEEP THE QUOTATION MARKS **INTACT**.
 
-The description of the first job postion entry has an example of html you can add and perform.
+The comments in the data file has an example of html you can add and perform in the job description.
 
 Heres a link to basic html elements,code, and syntax: https://www.w3schools.com/html/html_elements.asp

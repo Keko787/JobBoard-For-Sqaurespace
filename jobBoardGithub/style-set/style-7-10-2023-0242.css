@@ -1,0 +1,113 @@
+/*For the job board menu and space format*/
+        
+   li {
+    list-style: none;
+  }
+  .a-button {
+    margin-left: 2.5%;
+  }
+
+/*For the job position cards */
+  .card {
+  width: 35rem; 
+  padding: 15px;
+  margin: 10px 0;
+  }
+
+/* Custom styles for modal (the popup window) */
+    .modal-body {
+        max-height: calc(90vh - 112px);  /* Set a maximum height for the modal body */
+        overflow-y: auto;  /* Enable vertical scrolling if content exceeds the height */
+        white-space: normal;  /* or break-spaces */
+        overflow-x: hidden;  /* Remove the overflow-x property */
+    }
+
+    .modal-dialog {
+      max-height: 90vh;  /* Set a maximum height for the modal dialog */
+      width: 95%;  /* Set the width of the modal dialog and window max*/
+      max-width: 1200px;  /* Set a maximum width for the modal dialog */
+    }
+
+
+/*custom fonts and styles for descripton data*/
+.position-frontend p{
+color:rgb(16, 18, 163);
+}
+
+.position-frontend p:nth-of-type(3) {  /*the number dictates which element of that type will be affected by order of elements of that type, 
+    so this is affecting the nth p element*/
+background-color: yellow;
+}
+
+/*For integrating into your sqaurespace webpage (COPY AND PASTE THE STYLES FROM INSPECT ELEMENT) 
+[Styles below are examples, but YOU MUST OVERWRITE THEM TO ADD YOUR OWN]*/
+
+/*Reformat links <a> in header nav*/
+  
+  a {
+  color: inherit;
+  text-decoration: none;
+  }
+
+  a {
+  background-color: transparent;
+    }
+  
+/*Reformat <h1>*/
+
+  h1 {
+  color: #002664;
+  }
+
+  h1 {
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    font-family: eurostile-extended;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 26px;
+    letter-spacing: 0em;
+    line-height: 1em;
+    text-transform: none;
+}
+
+/*Reformat <h2>*/
+
+/*Reformat <h3>*/
+
+  h3 {
+  /* font-family: Arial,Helvetica,sans-serif; */
+  /* font-weight: 700; */
+  /* font-size: 18px; */
+  /* letter-spacing: 0em; */
+  /* line-height: 1.2em; */
+  /* text-transform: none; */
+  font-family: eurostile;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: .32em;
+  line-height: .9em;
+  text-transform: uppercase;
+  }
+
+h3 {
+  color: #5482ab;
+}
+  
+/*Reformat <p> */
+body {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  letter-spacing: 0em;
+  line-height: 1.6em;
+  font-family: Droid Sans;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: .03em;
+  line-height: 1.9em;
+  text-transform: none;
+  color: #7a7d7f;
+}

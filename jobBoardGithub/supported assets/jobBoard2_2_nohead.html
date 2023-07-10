@@ -40,14 +40,14 @@
             <div class="col-md-9">
               <ul>
                 <li v-for="job in filteredJobs" :key="job.id">
-                  <div class="card">
+                  <div class="card" >
                     <div class="card-body">
                       <h4 class="card-title">{{ job.title }}</h4>
                       <h6 class="card-subtitle mb-2 text-muted">{{job.location}}</h6>
                       <h6 class="card-subtitle mb-2 text-muted">{{job.department}}</h6>
                       <button type="button" class="btn btn-secondary" data-bs-toggle="modal" :data-bs-target="'#jobModal-' + job.id">Job Description</button>
                       <!--<a :href="'https://example.com/job/' + job.id" class="btn btn-primary a-button">Apply</a>-->  <!--debug-->
-                      <a :href="'https://www.example.com/job-' + job.locationSlug + '-' + job.department.toLowerCase()" class="btn btn-primary a-button">Apply</a>  <!--Link to application page-->
+                      <a :href="'https://www.aespj.com/job-' + job.locationSlug + '-' + job.department.toLowerCase()" class="btn btn-primary a-button">Apply</a>  <!--Link to application page-->
                     </div>
                   </div>
 
@@ -60,11 +60,11 @@
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">  <!--where the content appears/ the window size-->
-                          <p v-html="job.description"></p>
+                          <p v-html="job.description" :class="[job.style]"></p>
                         </div>
                         <div class="modal-footer">
                         <!--<a :href="'https://example.com/job/' + job.id" class="btn btn-primary">Apply</a>-->  <!--debug-->
-                        <a :href="'https://www.example.com/job-' + job.locationSlug + '-' + job.department.toLowerCase()" class="btn btn-primary a-button">Apply</a>  <!--Link to application page-->
+                        <a :href="'https://www.aespj.com/job-' + job.locationSlug + '-' + job.department.toLowerCase()" class="btn btn-primary a-button">Apply</a>  <!--Link to application page-->
                         </div>
                       </div>
                     </div>
@@ -109,10 +109,26 @@
 
           .modal-dialog {
             max-height: 90vh;  /* Set a maximum height for the modal dialog */
-            width: 95%;  /* Set the width of the modal dialog and window*/
+            width: 95%;  /* Set the width of the modal dialog and window max*/
             max-width: 1200px;  /* Set a maximum width for the modal dialog */
           }
     
+
+    /*custom fonts and styles for job-descripton data 
+    [YOU MUST USE CLASSES AND PUT THE STYLING IN THE PROGRAM 
+    AND THE CLASS NAME IN THE DATA AS SHOWN IN THE DATA FILE]*/
+
+    
+
+    .position-frontend p{  /*when making classes for the data, unless you want it to affect all elements, make sure to use the element selector as show*/
+      color:rgb(16, 18, 163);
+    }
+
+    .position-frontend p:nth-of-type(3) {  /*the number dictates which element of that type will be affted
+      */
+      background-color: yellow;
+    }
+   
     /*For integrating into your sqaurespace webpage (COPY AND PASTE THE STYLES FROM INSPECT ELEMENT) 
     [Styles below are examples, but YOU MUST OVERWRITE THEM TO ADD YOUR OWN]*/
     
@@ -194,29 +210,27 @@
     
     <!--Data File-->
     <!-----------------------------------------------------------------------------------------
-      ***KEEP NOTE***: DUE TO CACHING PROCEEDURES FROM THE CDN, YOU MUST CHANGE THE FILE NAME WHEN CHANGING/UPDATING DATA AND IT MUST BE UNIQUE
+     ***KEEP NOTE***: DUE TO CACHING PROCEEDURES FROM THE CDN, YOU MUST CHANGE THE FILE NAME WHEN CHANGING/UPDATING DATA AND IT MUST BE UNIQUE
 
      (RECCOMENDED TO USE A NAMING SCHEME BASED ON DATE AND TIME FORMAT:[data-month-day-year-HourMinute.js])
      EX of Naming Scheme:  [ data-6-22-2023-1020.js ]
      
-     You must also change the source link in this index file to the new file name of the updated file 
+     You must also change the source link in this codebase to the new file name of the updated file 
     ---------------------------------------------------------------------------------------------->
 
     <!--Data File CDN SRC Link BELOW------------>
-    <script src="https://cdn.jsdelivr.net/gh/Keko787/jobBoard-data-test@latest/data-6-29-2023-0255.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Keko787/jobBoard-data-test@latest/data-7-10-2023-1220.js"></script>
     <!-------------------------------------------------------------------------------------------------->
 
     <!--Make sure to input the file path based on the template or format below 
     <script src="https://cdn.jsdelivr.net/gh/Keko787/JobBoard-For-Squarespace/jobBoardGithub/data-6-22-2023-1020.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/user/repo@latest/path/file.js"></script>
-    
-    Redundant link: <script src="https://cdn.jsdelivr.net/gh/Keko787/JobBoard-For-Squarespace/jobBoardGithub/data-6-22-2023-1020.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/user/repo@ver/path/file.js"></script>
     --------------------------------------------------------------------------------------------------------------->
       
     <!--App script/ vue.js code [has data, and functions to make it work]-->
       <script>
         const app = Vue.createApp({
-          data() {
+          data() {  // data
             return {
               jobs: jobsdata,  // jobsdata is from the data file
               selectedDepartments: [],  // list of filtered departments (You can manually initialize the menu with it pre-selected)
@@ -226,7 +240,7 @@
               searchQuery: ''  // inputted word in search
             };
           },
-          computed: {
+          computed: {  // functions
             filteredJobs() {  // filters the position based on the dept. and location selected
               let filteredJobs = this.jobs;  // initialize the filter jobs variable with the populated jobs data
       
@@ -257,6 +271,6 @@
       <!--END OF JS SCRIPT-->
     
       <!--By Kevin Kostage
-        Version 2.2
-        6/7/21 - 6/29/23
+        Version 2.3
+        6/7/21 - 7/10/23
       -->

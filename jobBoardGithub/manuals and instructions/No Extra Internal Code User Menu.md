@@ -184,7 +184,7 @@ refer to the example:
 
 ## 6. Debug
 
-### 6.1 If your data hasnt been updated
+### 6.1 If your data, css style, or script hasnt been updated
 
 make sure that you've changed the name of the file when updating, and make sure to change the name of file in the CDN link according to the file.
 

@@ -181,6 +181,19 @@ If you want to specify more than one location or department, just add a "," in t
 refer to the example:
 ![sc of data](https://github.com/Keko787/JobBoard-For-Sqaurespace/assets/73184531/7a18d46d-e9e7-4953-b00f-635765a8f197)
 
+### 5.3 changing application link
+in the job positon entries section in the **html block**, look for the comment that says "Link to application page".
+
+beside it, in the href variable is the URL for the supposed application page. Change the example.com url to the website of your choosing.
+
+You can mess with the formula on how the url and slugs or formed, the variables and values are based off the information from the position data. I suggest using the info from the job data to make the url formula if you need to make multiple application webpages.
+
+Make sure to properly make the url with the right syntax. Instead of spaces, use a "-" .
+
+make sure you change the one in the modal pop-up section as well.
+
+refer to the example:
+![sc of links stuff](https://github.com/Keko787/JobBoard-For-Sqaurespace/assets/73184531/8dc69a7a-d822-48bc-9f1e-6b0217b9f4b8)
 
 ## 6. Debug
 
@@ -206,5 +219,9 @@ This occured because you either never replaced the reformating section with your
 
 Refer to section 4.1
 
+### 6.4 please contact author if problem still consist
+contact through github comments or email.
 
+### 6.5 general notes
 
+make sure your application page url links is properly written.

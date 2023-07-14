@@ -76,6 +76,13 @@ Once you are done making your style classes, or the first iteration, input the c
 
 ![sc of data ver3](https://github.com/Keko787/JobBoard-For-Sqaurespace/assets/73184531/bebfb59e-2d82-4c4b-8acf-642b23202550)
 
+### 3.4 Job description multiline input
+using the grave ( ` ) instead of quotation marks, you can use multiple lines to input your job description in the source code. This makes it much more readable, understandable, and easier to change on the fly inside your project without having to use additional files or environments (you are more than welcome to).
+
+ Screenshot ex from data:
+ 
+ (look at the description variable and value. The value is using ` instead of ") 
+ ![multi line ex](https://github.com/Keko787/JobBoard-For-Sqaurespace/assets/73184531/f8535076-eaab-4dac-8f3b-6cc22c59d689)
 
 ## 4. Reformating/integrating your webpage design and styles/Changing CSS and styling:
 

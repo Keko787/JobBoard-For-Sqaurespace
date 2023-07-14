@@ -57,9 +57,8 @@ MAKE SURE TO COMMIT THE CHANGE.
 	
 You can add html elements like "<-strong>" to make text bold and "<-ul>" and "<-li>" to makes lists, the only exception is "<-p>" because it is the default in the modal window, but it would still be recognized so no worries.
 
-It must stay in one line, but it there is no limit to how long the length of the line can be, so you can make the description as long as you want. It is recommended to use a notepad or text editor to create the description and paste it into the description value.
 
-MAKE SURE TO KEEP THE QUOTATION MARKS **INTACT**.
+MAKE SURE TO KEEP THE QUOTATION MARKS **INTACT**. Make sure commas (,) are not doubled.
 
 The comments in the data file has an example of html you can add and perform in the job description.
 
@@ -77,6 +76,14 @@ There is a section in the style block where you can make the classes for the sty
 Once you are done making your style classes, or the first iteration, input the class name into it as shown...
 
 ![sc of data ver3](https://github.com/Keko787/JobBoard-For-Sqaurespace/assets/73184531/bebfb59e-2d82-4c4b-8acf-642b23202550)
+
+### 3.4 Job description multiline input
+using the grave ( ` ) instead of quotation marks, you can use multiple lines to input your job description in the source code. This makes it much more readable, understandable, and easier to change on the fly inside your project without having to use additional files or environments (you are more than welcome to).
+
+ Screenshot ex from data:
+ 
+ (look at the description variable and value. The value is using ` instead of ") 
+ ![multi line ex](https://github.com/Keko787/JobBoard-For-Sqaurespace/assets/73184531/f8535076-eaab-4dac-8f3b-6cc22c59d689)
 
 
 ## 4. Reformating/integrating your webpage design and styles/Changing CSS and styling:

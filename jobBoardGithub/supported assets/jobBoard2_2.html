@@ -37,7 +37,7 @@
               </div>
               
               <!--Search menu that searches for position, department, and location, but will take the other filters into consideration-->
-              <div>
+              <div class="search-margin">
                 <h3>Search:</h3>
                 <input type="text" v-model="searchQuery" placeholder="Search job positions">
             </div>
@@ -120,7 +120,9 @@
             width: 95%;  /* Set the width of the modal dialog and window max*/
             max-width: 1200px;  /* Set a maximum width for the modal dialog */
           }
-    
+        .search-margin {
+            margin-top: 5%;
+        }
 
     /*custom fonts and styles for job-descripton data 
     [YOU MUST USE CLASSES AND PUT THE STYLING IN THE PROGRAM 

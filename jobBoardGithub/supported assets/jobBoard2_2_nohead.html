@@ -29,7 +29,7 @@
               </div>
               
               <!--Search menu that searches for position, department, and location, but will take the other filters into consideration-->
-              <div>
+              <div class="search-margin">
                 <h3>Search:</h3>
                 <input type="text" v-model="searchQuery" placeholder="Search job positions">
             </div>
@@ -90,6 +90,9 @@
         }
         .a-button {
           margin-left: 2.5%;
+        }
+        .search-margin {
+            margin-top: 5%;
         }
 
     /*For the job position cards */

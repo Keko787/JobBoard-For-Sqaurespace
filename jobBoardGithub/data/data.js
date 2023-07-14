@@ -11,7 +11,7 @@ let jobsdata = [  /* You can add more positions and information based on the for
     // you can copy this as a template
     { "id": #, 
       "title": "position", 
-      "description": "example ",  
+      "description": "example ",  // or you can use `` instead of "" for multiline   
       "location": "City, State ",  
       "locationSlug": "city-state",  
       "department": "Department",
@@ -21,7 +21,22 @@ let jobsdata = [  /* You can add more positions and information based on the for
     // real example
     { "id": 1, 
       "title": "Front-end Developer", 
-      "description": "<p>Our Senior Copywriters have a passion for writing and keen understanding of the specific demands of digital media. (In short: love words. Appreciate brevity.) In addition to creating content, media and marketing for a wide variety of users and user needs, Senior Copywriters are responsible for brainstorming creative concepts with the project team, developing original campaigns, and representing the writer’s perspective in client presentations. They express their ideas clearly not just on the page (or screen), but face-to-face. Senior Copywriters also help to foster the talents of our awesome copywriters at every level, both leading by example and sharing their experience. We’re looking for writers who are excited about digital experiences and who understand how to use both traditional and digital to hit campaign and business objectives.&nbsp;</p>\r\n<p><strong>What we’d like to see:</strong></p>\r\n<ul>\r\n<li>4+ years of experience, 2+ years at an agency.</li>\r\n<li>A strong agency background as well as a proven ability to create copy for a variety of audiences, brands, and industries.</li>\r\n<li>Deep experience doing beautiful, smart, print campaigns</li>\r\n<li>Experience in a range of digital platforms from social to online video campaigns.</li>\r\n<li>Great presentation skills, both internally and client-facing. We want you to produce great copy and be able to express your ideas clearly.</li>\r\n<li>An appreciation for the relationship between textual and visual elements (and great design in general). We expect our copywriters to understand that a product isn’t truly great unless the copy and the designs support each other.</li>\r\n<li>Ability to write professionally in a variety of styles for diverse audiences. You need to be able to adapt your voice to each project with extreme ease.</li>\r\n<li>Demonstrated ability to work independently when necessary and meet deadlines without handholding.</li>\r\n<li>Bachelor's degree or equivalent experience in a related field.</li>\r\n</ul>\r\n<p>Huge is an equal opportunity employer (EOE). We strongly support diversity in the workforce.</p>",
+      "description": `<p>Our Senior Copywriters have a passion for writing and keen understanding of the specific demands of digital media. (In short: love words. Appreciate brevity.)
+      In addition to creating content, media and marketing for a wide variety of users and user needs, Senior Copywriters are responsible for brainstorming creative concepts with the project team, developing original campaigns, 
+      and representing the writer’s perspective in client presentations. They express their ideas clearly not just on the page (or screen), but face-to-face. Senior Copywriters also help to foster the talents of our awesome 
+      copywriters at every level, both leading by example and sharing their experience. We’re looking for writers who are excited about digital experiences and who understand how to use both traditional and digital to hit 
+      campaign and business objectives.&nbsp;</p>\r\n<p><strong>What we’d like to see:</strong></p>
+      \r\n
+      <ul>\r\n
+      <li>4+ years of experience, 2+ years at an agency.</li>
+      \r\n<li>A strong agency background as well as a proven ability to create copy for a variety of audiences, brands, and industries.</li>
+      \r\n<li>Deep experience doing beautiful, smart, print campaigns</li>\r\n<li>Experience in a range of digital platforms from social to online video campaigns.</li>
+      \r\n<li>Great presentation skills, both internally and client-facing. We want you to produce great copy and be able to express your ideas clearly.</li>
+      \r\n<li>An appreciation for the relationship between textual and visual elements (and great design in general). We expect our copywriters to understand that a product isn’t truly great unless the copy and the designs support each other.</li>
+      \r\n<li>Ability to write professionally in a variety of styles for diverse audiences. You need to be able to adapt your voice to each project with extreme ease.</li>
+      \r\n<li>Demonstrated ability to work independently when necessary and meet deadlines without handholding.</li>\r\n<li>Bachelor's degree or equivalent experience in a related field.</li>
+      \r\n</ul>\r\n
+      <p>Huge is an equal opportunity employer (EOE). We strongly support diversity in the workforce.</p>`,
       "location": "Jacksonville, FL", 
       "locationSlug": "jacksonville-fl",
       "department": "Development",
@@ -35,7 +50,22 @@ let jobsdata = [  /* You can add more positions and information based on the for
     
     { "id": 1, 
       "title": "Front-end Developer", 
-      "description": "<p>Our Senior Copywriters have a passion for writing and keen understanding of the specific demands of digital media. (In short: love words. Appreciate brevity.) In addition to creating content, media and marketing for a wide variety of users and user needs, Senior Copywriters are responsible for brainstorming creative concepts with the project team, developing original campaigns, and representing the writer’s perspective in client presentations. They express their ideas clearly not just on the page (or screen), but face-to-face. Senior Copywriters also help to foster the talents of our awesome copywriters at every level, both leading by example and sharing their experience. We’re looking for writers who are excited about digital experiences and who understand how to use both traditional and digital to hit campaign and business objectives.&nbsp;</p>\r\n<p><strong>What we’d like to see:</strong></p>\r\n<ul>\r\n<li>4+ years of experience, 2+ years at an agency.</li>\r\n<li>A strong agency background as well as a proven ability to create copy for a variety of audiences, brands, and industries.</li>\r\n<li>Deep experience doing beautiful, smart, print campaigns</li>\r\n<li>Experience in a range of digital platforms from social to online video campaigns.</li>\r\n<li>Great presentation skills, both internally and client-facing. We want you to produce great copy and be able to express your ideas clearly.</li>\r\n<li>An appreciation for the relationship between textual and visual elements (and great design in general). We expect our copywriters to understand that a product isn’t truly great unless the copy and the designs support each other.</li>\r\n<li>Ability to write professionally in a variety of styles for diverse audiences. You need to be able to adapt your voice to each project with extreme ease.</li>\r\n<li>Demonstrated ability to work independently when necessary and meet deadlines without handholding.</li>\r\n<li>Bachelor's degree or equivalent experience in a related field.</li>\r\n</ul>\r\n<p>Huge is an equal opportunity employer (EOE). We strongly support diversity in the workforce.</p>",
+      "description": `<p>Our Senior Copywriters have a passion for writing and keen understanding of the specific demands of digital media. (In short: love words. Appreciate brevity.) 
+      In addition to creating content, media and marketing for a wide variety of users and user needs, Senior Copywriters are responsible for brainstorming creative concepts with the project team, 
+      developing original campaigns, and representing the writer’s perspective in client presentations. They express their ideas clearly not just on the page (or screen),
+      but face-to-face. Senior Copywriters also help to foster the talents of our awesome copywriters at every level, both leading by example and sharing their experience.
+      We’re looking for writers who are excited about digital experiences and who understand how to use both traditional and digital to hit campaign and business objectives.&nbsp;</p>\r\n
+      <p><strong>What we’d like to see:</strong></p>\r\n
+      <ul>\r\n
+      <li>4+ years of experience, 2+ years at an agency.</li>\r\n
+      <li>A strong agency background as well as a proven ability to create copy for a variety of audiences, brands, and industries.</li>\r\n
+      <li>Deep experience doing beautiful, smart, print campaigns</li>\r\n<li>Experience in a range of digital platforms from social to online video campaigns.</li>\r\n
+      <li>Great presentation skills, both internally and client-facing. We want you to produce great copy and be able to express your ideas clearly.</li>\r\n
+      <li>An appreciation for the relationship between textual and visual elements (and great design in general). We expect our copywriters to understand that a product isn’t truly great unless the copy and the designs support each other.</li>\r\n
+      <li>Ability to write professionally in a variety of styles for diverse audiences. You need to be able to adapt your voice to each project with extreme ease.</li>\r\n
+      <li>Demonstrated ability to work independently when necessary and meet deadlines without handholding.</li>\r\n<li>Bachelor's degree or equivalent experience in a related field.</li>\r\n<
+      /ul>\r\n
+      <p>Huge is an equal opportunity employer (EOE). We strongly support diversity in the workforce.</p>`,
       "location": "Jacksonville, FL", 
       "locationSlug": "jacksonville-fl",
       "department": "Development",
